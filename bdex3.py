@@ -14,7 +14,7 @@ c=[]
 for i in range(min_age, max_age+1):
     l= ages[ages==i]
     h=len(l)
-    c.append([h,i,i])
+    c.append([h,i,i+1])
 
 d=np.array(c)
 range=int(np.max(ages)-np.min(ages))
@@ -32,6 +32,6 @@ fig = plt.figure()
 #plt.hist(ages, bins=np.max(ages)-np.min(ages))
 hist=pygal.Histogram()
 hist.add('ages',e)
-hist.render_to_file('histages.svg')
+hist.render_to_file('histages2.svg')
 #plt.show()
 
